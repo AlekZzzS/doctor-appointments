@@ -8,7 +8,7 @@ export const AppDataSource = new DataSource({
     port: 5432,
     username: process.env.POSTGRES_USER || 'postgres',
     password: process.env.POSTGRES_PASSWORD || '123',
-    database: 'doctor_appointments',
+    database: process.env.POSTGRES_DB || 'postgres',
     synchronize: true,
     logging: false,
     entities: [UserSchema, DoctorSchema]
